@@ -8,7 +8,7 @@ class EmployeeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def validate_email(self, value):
-        if not value.endswith("@company.com"):
+        if not value.endswith("@gmail.com"):
             raise serializers.ValidationError("Email must be company domain")
         return value
 
